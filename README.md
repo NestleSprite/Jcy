@@ -1,3 +1,3 @@
-# Jcy
+# NestleSprite
 
 just for fun
