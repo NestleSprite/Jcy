@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+
+    android:background="@color/white"
+    tools:context="legend.nestlesprite.jcy.activity.LoginActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar"/>
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_logo_big"
+        android:layout_marginTop="@dimen/pd51"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/pd108"
+        android:layout_height="@dimen/pd108" />
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pd24"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pd48"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_account"
+            android:layout_gravity="center_vertical"
+            />
+
+        <EditText
+            android:id="@+id/edit_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/pd15"
+            android:paddingRight="@dimen/pd15"
+            android:background="@null"
+
+            android:gravity="center_vertical"
+            android:hint="@string/enter.account"
+            android:textSize="@dimen/ps14"
+            android:singleLine="true"
+            style="@style/dark_primary_txt"
+            />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/dark_dividers"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pd9"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pd48"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_password"
+            android:layout_gravity="center_vertical"
+            />
+
+        <EditText
+            android:password="true"
+            android:id="@+id/edit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/pd15"
+            android:paddingRight="@dimen/pd15"
+            android:background="@null"
+
+            android:gravity="center_vertical"
+            android:hint="@string/enter.password"
+            android:textSize="@dimen/ps14"
+            android:singleLine="true"
+            style="@style/dark_primary_txt"
+            />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/dark_dividers"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pd9"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pd48"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_company"
+            android:layout_gravity="center_vertical"
+            />
+
+        <EditText
+            android:id="@+id/edit_company"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/pd15"
+            android:paddingRight="@dimen/pd15"
+            android:background="@null"
+
+            android:gravity="center_vertical"
+            android:hint="@string/emter.company"
+            android:textSize="@dimen/ps14"
+            android:singleLine="true"
+            style="@style/dark_primary_txt"
+            />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/dark_dividers"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="@dimen/pd36"
+        android:layout_gravity="center_horizontal"
+        style="@style/big_button"
+        android:text="@string/login"
+      />
+
+    </LinearLayout>
+
+</ScrollView>

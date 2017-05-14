@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">监测仪</string>
+    <string name="enter.account">请输入账号</string>
+    <string name="enter.password">请输入密码</string>
+    <string name="emter.company">请输入公司名称</string>
+    <string name="login">登录</string>
+    <string name="signal.test">信号强度检测</string>
+    <string name="data.search">布料相关信息查询</string>
+    <string name="search">搜索</string>
+</resources>

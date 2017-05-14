@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <EditText
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pd48"
+        android:layout_marginLeft="@dimen/pd48"
+        android:layout_marginRight="@dimen/pd48"
+        android:layout_marginTop="@dimen/pd24"
+        android:background="@drawable/shp_input_back"
+        android:hint="在这里输入布匹的名称"
+        android:paddingLeft="@dimen/pd9"
+        android:paddingRight="@dimen/pd9"
+        android:textSize="@dimen/ps14" />
+
+    <Button
+        style="@style/big_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/pd24"
+        android:text="@string/search" />
+
+    <TextView
+        style="@style/dark_secondary_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pd90"
+        android:layout_marginTop="@dimen/pd48"
+        android:text="工号：879878"
+        android:textSize="@dimen/ps24" />
+
+    <TextView
+        style="@style/dark_secondary_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pd90"
+        android:layout_marginTop="@dimen/pd12"
+
+        android:text="瑕疵数目：200"
+        android:textSize="@dimen/ps24" />
+
+    <TextView
+        style="@style/dark_secondary_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pd90"
+        android:layout_marginTop="@dimen/pd12"
+
+        android:text="材料：羊毛"
+        android:textSize="@dimen/ps24" />
+
+    <TextView
+        style="@style/dark_secondary_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pd90"
+        android:layout_marginTop="@dimen/pd12"
+        android:text="用时：23min"
+        android:textSize="@dimen/ps24" />
+
+</LinearLayout>
