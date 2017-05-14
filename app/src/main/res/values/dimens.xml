@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- values -->
+    <!-- numbers -->
     <!--dp -->
     <dimen name="pd1">1dp</dimen>
     <dimen name="pd2">2dp</dimen>

@@ -17,12 +17,14 @@
             android:layout_height="@dimen/pd240"
             android:indeterminateDrawable="@drawable/shp_progress" />
         <TextView
+            style="@style/dark_primary_txt"
             android:layout_centerInParent="true"
             android:textSize="@dimen/ps18"
             android:text="@string/connecting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            style="@style/dark_primary_txt"
             android:paddingTop="@dimen/pd48"
             android:layout_centerInParent="true"
             android:textSize="@dimen/ps16"

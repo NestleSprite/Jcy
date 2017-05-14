@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
         llData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ConnectActivity.class));
+                startActivity(new Intent(MainActivity.this, DataActivity.class));
             }
         });
         llSignal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DataActivity.class));
+                startActivity(new Intent(MainActivity.this, ConnectActivity.class));
 
             }
         });

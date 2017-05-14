@@ -9,4 +9,5 @@
     <string name="search">搜索</string>
     <string name="plz.wait">请稍候</string>
     <string name="connecting">连接中...</string>
+    <string name="signal.strength">信号强度</string>
 </resources>
