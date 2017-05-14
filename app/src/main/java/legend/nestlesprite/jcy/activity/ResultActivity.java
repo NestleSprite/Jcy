@@ -9,20 +9,20 @@ import android.widget.TextView;
 import legend.nestlesprite.jcy.R;
 
 /**
- * Created by Administrator on 2017/4/15 0015.
+ * Created by Administrator on 2017/5/14 0014.
  */
 
-public class SignalActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView txtTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signal);
+        setContentView(R.layout.activity_result);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        txtTitle = (TextView) findViewById(R.id.txt_title);
-        txtTitle.setText("信号强度检测");
+        txtTitle= (TextView) findViewById(R.id.txt_title);
+        txtTitle.setText("检测结果");
         toolbar.setNavigationIcon(R.mipmap.ic_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,6 @@
 package legend.nestlesprite.jcy.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +15,6 @@ import android.widget.TextView;
 import java.util.Date;
 
 import legend.nestlesprite.jcy.R;
-import legend.nestlesprite.jcy.util.CommonUtil;
 
 import static legend.nestlesprite.jcy.util.CommonUtil.showToastTip;
 
@@ -108,7 +108,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                CommonUtil.startActivity(LoginActivity.this, button, MainActivity.class, null);
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
                 showToastTip("登录成功");
             }
         });

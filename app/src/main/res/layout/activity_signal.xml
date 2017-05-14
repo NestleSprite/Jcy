@@ -6,15 +6,31 @@
     android:orientation="vertical">
 
     <include layout="@layout/include_toolbar" />
-    <TextView
-        android:layout_marginTop="@dimen/pd72"
+    <RelativeLayout
+        android:layout_marginTop="@dimen/pd36"
         android:layout_gravity="center_horizontal"
-        style="@style/dark_primary_txt"
-        android:text="界面待定"
+        android:layout_width="@dimen/pd240"
+        android:layout_height="@dimen/pd240">
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/pd240"
+            android:layout_height="@dimen/pd240"
+            android:indeterminateDrawable="@drawable/shp_progress" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/ps18"
+            android:text="@string/connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingTop="@dimen/pd48"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/ps16"
+            android:text="@string/plz.wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
-        android:textSize="@dimen/ps18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 
 

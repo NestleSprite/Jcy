@@ -25,13 +25,19 @@
             android:theme="@style/AppTheme.Activity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.SignalActivity"
+            android:name=".activity.ConnectActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Activity"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.DataActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Activity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ResultActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Activity"

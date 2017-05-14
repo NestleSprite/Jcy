@@ -7,4 +7,6 @@
     <string name="signal.test">信号强度检测</string>
     <string name="data.search">布料相关信息查询</string>
     <string name="search">搜索</string>
+    <string name="plz.wait">请稍候</string>
+    <string name="connecting">连接中...</string>
 </resources>
