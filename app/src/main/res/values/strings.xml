@@ -10,4 +10,6 @@
     <string name="plz.wait">请稍候</string>
     <string name="connecting">连接中...</string>
     <string name="signal.strength">信号强度</string>
+    <string name="connect.failure">连接失败</string>
+    <string name="reconnect">重新连接</string>
 </resources>

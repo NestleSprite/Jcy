@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import legend.nestlesprite.jcy.R;
@@ -17,7 +18,10 @@ import legend.nestlesprite.jcy.R;
 public class ConnectActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView txtTitle;
-    Handler handler=new Handler();
+    private RelativeLayout rlConnect;
+    private RelativeLayout rlFailure;
+
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,10 @@ public class ConnectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signal);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtTitle = (TextView) findViewById(R.id.txt_title);
+        rlConnect = (RelativeLayout) findViewById(R.id.rl_connect);
+        rlFailure = (RelativeLayout) findViewById(R.id.rl_failure);
+        rlConnect.setVisibility(View.GONE);
+        rlFailure.setVisibility(View.VISIBLE);
         txtTitle.setText("信号强度检测");
         toolbar.setNavigationIcon(R.mipmap.ic_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -33,7 +41,7 @@ public class ConnectActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        Runnable runnable=new Runnable() {
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(ConnectActivity.this, ResultActivity.class);
@@ -42,6 +50,6 @@ public class ConnectActivity extends AppCompatActivity {
 
             }
         };
-        handler.postDelayed(runnable,5000);
+        handler.postDelayed(runnable, 5000);
     }
 }
