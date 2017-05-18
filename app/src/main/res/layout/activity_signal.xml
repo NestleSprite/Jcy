@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/button"
                 android:layout_marginTop="@dimen/pd72"
                 android:layout_gravity="center_horizontal"
                 style="@style/big_button"
