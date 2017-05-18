@@ -1,5 +1,6 @@
 package legend.nestlesprite.jcy.activity;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,7 @@ public class ConnectActivity extends AppCompatActivity {
     private RelativeLayout rlConnect;
     private RelativeLayout rlFailure;
 
+
     Handler handler = new Handler();
 
     @Override
@@ -31,8 +33,7 @@ public class ConnectActivity extends AppCompatActivity {
         txtTitle = (TextView) findViewById(R.id.txt_title);
         rlConnect = (RelativeLayout) findViewById(R.id.rl_connect);
         rlFailure = (RelativeLayout) findViewById(R.id.rl_failure);
-        rlConnect.setVisibility(View.GONE);
-        rlFailure.setVisibility(View.VISIBLE);
+        BluetoothAdapter adapter=BluetoothAdapter.getDefaultAdapter();
         txtTitle.setText("信号强度检测");
         toolbar.setNavigationIcon(R.mipmap.ic_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,14 @@ public class ConnectActivity extends AppCompatActivity {
 
             }
         };
-        handler.postDelayed(runnable, 5000);
+        if(adapter.isEnabled()){
+            rlConnect.setVisibility(View.VISIBLE);
+            rlFailure.setVisibility(View.GONE);
+            handler.postDelayed(runnable, 5000);
+        }else{
+            rlConnect.setVisibility(View.GONE);
+            rlFailure.setVisibility(View.VISIBLE);
+        }
+
     }
 }
