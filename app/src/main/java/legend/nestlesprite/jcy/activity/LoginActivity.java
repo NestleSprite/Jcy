@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtTitle = (TextView) findViewById(R.id.txt_title);
-        txtTitle.setText("登录");
+        txtTitle.setText(R.string.login);
         editAccount = (EditText) findViewById(R.id.edit_account);
         editPwd = (EditText) findViewById(R.id.edit_pwd);
         editCompany = (EditText) findViewById(R.id.edit_company);

@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -95,16 +94,11 @@ public class ConnectActivity extends AppCompatActivity {
 
                     BluetoothDevice scanDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     if (scanDevice == null || scanDevice.getName() == null) return;
-                    Log.d("jcy", "name=" + scanDevice.getName() + "address=" + scanDevice.getAddress());
-
-
                 } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                     rlConnect.setVisibility(View.GONE);
                     rlFailure.setVisibility(View.VISIBLE);
-
                 }
             }
-
         };
         registerReceiver(broadcastReceiver, intentFilter);
 
