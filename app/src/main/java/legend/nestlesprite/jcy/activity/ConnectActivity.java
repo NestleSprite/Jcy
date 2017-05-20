@@ -93,6 +93,7 @@ public class ConnectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
                 startActivity(intent);
+                finish();
             }
         });
 
