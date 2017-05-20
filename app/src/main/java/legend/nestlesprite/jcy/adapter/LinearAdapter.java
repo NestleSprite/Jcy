@@ -15,23 +15,16 @@ import legend.nestlesprite.jcy.util.ColorUtil;
 
 
 public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
-
-
     private Context mContext;
     private List<Integer> numbers;
-
-
     public LinearAdapter(Context mContext, List<Integer> numbers) {
         this.mContext = mContext;
         this.numbers = numbers;
-
-
     }
 
 
     @Override
     public LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_liner, parent, false);
         return new LinearViewHolder(view);
     }
@@ -39,27 +32,21 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
     @Override
     public void onBindViewHolder(LinearViewHolder holder, final int position) {
         int num = numbers.get(position);
-
         int color = ColorUtil.getDegreeColor(num);
         holder.ll.setBackgroundColor(color);
         holder.textView.setText("信号强度： " + num);
         holder.pos.setText("传感器 " + (position + 1));
-
-
     }
 
     @Override
     public int getItemCount() {
         return numbers.size();
-
     }
 
     class LinearViewHolder extends RecyclerView.ViewHolder {
         private RelativeLayout ll;
         private TextView textView;
         private TextView pos;
-
-
         public LinearViewHolder(View itemView) {
             super(itemView);
             ll = (RelativeLayout) itemView.findViewById(R.id.ll);
