@@ -39,11 +39,21 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/rl_failure"
-            android:visibility="visible"
-            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/pd66"
+            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/img_cross"
+                android:layout_width="@dimen/pd180"
+                android:layout_height="@dimen/pd180"
+                android:src="@mipmap/ic_cross"/>
             <TextView
+                android:layout_marginTop="@dimen/pd36"
+                android:layout_below="@id/img_cross"
+                android:id="@+id/txt_hint"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_centerHorizontal="true"
@@ -51,11 +61,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
+                android:layout_below="@id/txt_hint"
                 android:id="@+id/button"
-                android:layout_marginTop="@dimen/pd72"
+                android:layout_marginTop="@dimen/pd24"
                 android:layout_gravity="center_horizontal"
                 style="@style/big_button"
                 android:text="@string/reconnect"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_unconnect"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/ps18"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bluetooth.notopen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_on"
+                android:layout_marginTop="@dimen/pd36"
+                android:layout_gravity="center_horizontal"
+                style="@style/big_button"
+                android:text="@string/go.open"
                 />
         </RelativeLayout>
 

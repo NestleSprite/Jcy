@@ -12,4 +12,6 @@
     <string name="signal.strength">信号强度</string>
     <string name="connect.failure">连接失败</string>
     <string name="reconnect">重新连接</string>
+    <string name="bluetooth.notopen">蓝牙未打开</string>
+    <string name="go.open">前去打开</string>
 </resources>

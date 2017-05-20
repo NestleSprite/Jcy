@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -27,6 +28,9 @@ public class ConnectActivity extends AppCompatActivity {
     private RelativeLayout rlConnect;
     private RelativeLayout rlFailure;
     private Button button;
+    private RelativeLayout rlUnconnect;
+    private Button btnOn;
+
 
 
     Handler handler = new Handler();
@@ -40,6 +44,9 @@ public class ConnectActivity extends AppCompatActivity {
         rlConnect = (RelativeLayout) findViewById(R.id.rl_connect);
         rlFailure = (RelativeLayout) findViewById(R.id.rl_failure);
         button = (Button) findViewById(R.id.button);
+        rlUnconnect= (RelativeLayout) findViewById(R.id.rl_unconnect);
+        btnOn= (Button) findViewById(R.id.btn_on);
+
 
         final BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         txtTitle.setText("信号强度检测");
@@ -62,20 +69,30 @@ public class ConnectActivity extends AppCompatActivity {
         if (adapter.isEnabled()) {
             rlConnect.setVisibility(View.VISIBLE);
             rlFailure.setVisibility(View.GONE);
+            rlUnconnect.setVisibility(View.GONE);
             enableBlueTh(adapter);
             handler.postDelayed(runnable, 5000);
         } else {
+            rlUnconnect.setVisibility(View.VISIBLE);
             rlConnect.setVisibility(View.GONE);
-            rlFailure.setVisibility(View.VISIBLE);
+            rlFailure.setVisibility(View.GONE);
         }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rlConnect.setVisibility(View.VISIBLE);
+                rlUnconnect.setVisibility(View.GONE);
                 rlFailure.setVisibility(View.GONE);
                 enableBlueTh(adapter);
                 handler.postDelayed(runnable, 5000);
 
+            }
+        });
+        btnOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
+                startActivity(intent);
             }
         });
 
@@ -96,6 +113,7 @@ public class ConnectActivity extends AppCompatActivity {
                     if (scanDevice == null || scanDevice.getName() == null) return;
                 } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                     rlConnect.setVisibility(View.GONE);
+                    rlUnconnect.setVisibility(View.GONE);
                     rlFailure.setVisibility(View.VISIBLE);
                 }
             }
