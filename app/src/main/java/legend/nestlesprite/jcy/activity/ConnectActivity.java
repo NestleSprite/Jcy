@@ -48,15 +48,15 @@ public class ConnectActivity extends AppCompatActivity {
         btnOn= (Button) findViewById(R.id.btn_on);
 
 
-        final BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        txtTitle.setText("信号强度检测");
-        toolbar.setNavigationIcon(R.mipmap.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+    //    final BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+//        txtTitle.setText("信号强度检测");
+//        toolbar.setNavigationIcon(R.mipmap.ic_back);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
         final Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -66,25 +66,27 @@ public class ConnectActivity extends AppCompatActivity {
 
             }
         };
-        if (adapter.isEnabled()) {
-            rlConnect.setVisibility(View.VISIBLE);
-            rlFailure.setVisibility(View.GONE);
-            rlUnconnect.setVisibility(View.GONE);
-            enableBlueTh(adapter);
-            handler.postDelayed(runnable, 5000);
-        } else {
-            rlUnconnect.setVisibility(View.VISIBLE);
-            rlConnect.setVisibility(View.GONE);
-            rlFailure.setVisibility(View.GONE);
-        }
+        handler.postDelayed(runnable,3000);
+//        if (adapter.isEnabled()) {
+//            rlConnect.setVisibility(View.VISIBLE);
+//            rlFailure.setVisibility(View.GONE);
+//            rlUnconnect.setVisibility(View.GONE);
+//            enableBlueTh(adapter);
+//            handler.postDelayed(runnable, 5000);
+//        } else {
+//            rlUnconnect.setVisibility(View.VISIBLE);
+//            rlConnect.setVisibility(View.GONE);
+//            rlFailure.setVisibility(View.GONE);
+//
+//        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rlConnect.setVisibility(View.VISIBLE);
-                rlUnconnect.setVisibility(View.GONE);
-                rlFailure.setVisibility(View.GONE);
-                enableBlueTh(adapter);
-                handler.postDelayed(runnable, 5000);
+//                rlConnect.setVisibility(View.VISIBLE);
+//                rlUnconnect.setVisibility(View.GONE);
+//                rlFailure.setVisibility(View.GONE);
+//                enableBlueTh(adapter);
+//                handler.postDelayed(runnable, 5000);
 
             }
         });
